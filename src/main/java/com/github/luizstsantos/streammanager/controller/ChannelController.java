@@ -25,7 +25,7 @@ public class ChannelController {
         return channelService.getAllChannels();
     }
     //GET /channels/{id} - busca por id
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Channel> getChannelById(@PathVariable Long id) {
         return channelService.getChannelById(id)
                 .map(ResponseEntity::ok)
